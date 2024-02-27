@@ -20,7 +20,8 @@ def get_filenames_in_directory(directory):
         for item in items:
             # Check if the item is a file
             if os.path.isfile(os.path.join(directory, item)):
-                filenames.append(item)
+                if(item != "meta.json") :
+                    filenames.append(item)
     return filenames
 
 if __name__ == "__main__":
